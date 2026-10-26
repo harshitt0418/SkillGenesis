@@ -1,0 +1,407 @@
+/* =========================================================================
+   PART 2 STYLES: Course Introduction & Why Choose SkillGenesis (Benefits)
+   ========================================================================= */
+
+/* Section 1: Course Introduction (Light Ivory Background) */
+.course-intro-section {
+  position: relative;
+  background-color: var(--color-ivory);
+  color: var(--color-navy);
+  padding: 6.5rem 0;
+  border-top: 1px solid var(--border-ivory-med);
+  border-bottom: 1px solid rgba(10, 22, 48, 0.08);
+  overflow: hidden;
+}
+
+/* Subtle architectural coordinate lines on light background */
+.editorial-frame-light {
+  position: relative;
+  border: 1px solid rgba(10, 22, 48, 0.12);
+  border-radius: 16px;
+  padding: 3.5rem 3rem;
+  background-color: var(--color-warm-white);
+  box-shadow: 0 10px 30px rgba(10, 22, 48, 0.04);
+}
+
+.frame-corner-light {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  font-size: 0.75rem;
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.16em;
+  color: var(--color-slate);
+}
+
+.frame-tag-light {
+  position: absolute;
+  top: 1.5rem;
+  left: 2rem;
+  font-size: 0.72rem;
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.18em;
+  color: var(--color-deep-bronze);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.frame-tag-light::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 2px;
+  background-color: var(--color-deep-bronze);
+}
+
+.course-intro-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 3.5rem;
+  align-items: center;
+  margin-top: 1.25rem;
+}
+
+.intro-headline {
+  font-size: clamp(2.2rem, 3.8vw, 3.35rem);
+  font-weight: var(--fw-extrabold);
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  color: var(--color-navy);
+  margin-bottom: 1.75rem;
+}
+
+/* Gold background highlight block inspired by reference slide 10/11 */
+.highlight-badge-gold {
+  display: inline-block;
+  background-color: var(--color-gold);
+  color: var(--color-navy);
+  padding: 0.08em 0.35em;
+  border-radius: 4px;
+}
+
+.intro-lead-tag {
+  font-size: 1.15rem;
+  font-style: italic;
+  font-weight: var(--fw-semibold);
+  color: var(--color-deep-bronze);
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.intro-body-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-bottom: 2.25rem;
+}
+
+.intro-body-copy p {
+  color: var(--color-slate);
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.intro-body-copy strong {
+  color: var(--color-navy);
+  font-weight: var(--fw-bold);
+}
+
+/* Feature Spotlight Card (Right Column) */
+.gap-bridge-card {
+  background-color: var(--color-navy);
+  color: var(--color-ivory);
+  border-radius: 14px;
+  padding: 2.25rem 2rem;
+  box-shadow: 0 16px 40px rgba(10, 22, 48, 0.22);
+  border: 1px solid var(--border-gold-subtle);
+  position: relative;
+}
+
+.gap-bridge-header {
+  margin-bottom: 1.75rem;
+  border-bottom: 1px solid var(--border-ivory-low);
+  padding-bottom: 1.25rem;
+}
+
+.gap-bridge-eyebrow {
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  font-weight: var(--fw-bold);
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.gap-bridge-title {
+  font-size: 1.35rem;
+  font-weight: var(--fw-bold);
+  color: var(--color-ivory);
+  line-height: 1.25;
+}
+
+.pillar-chips-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.pillar-chip {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  background: rgba(18, 36, 74, 0.6);
+  border: 1px solid var(--border-ivory-low);
+  transition: all var(--transition-fast);
+}
+
+.pillar-chip:hover {
+  background: var(--color-lighter-navy);
+  border-color: var(--color-gold);
+  transform: translateX(4px);
+}
+
+.pillar-icon-box {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  background: rgba(217, 177, 90, 0.15);
+  border: 1px solid var(--border-gold-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-gold);
+  flex-shrink: 0;
+}
+
+.pillar-icon-box svg {
+  width: 14px;
+  height: 14px;
+}
+
+.pillar-text {
+  font-size: 0.88rem;
+  font-weight: var(--fw-medium);
+  color: var(--color-ivory);
+}
+
+/* Button style for Light Background */
+.btn-dark {
+  background-color: var(--color-navy);
+  color: var(--color-ivory);
+  border: 1px solid var(--color-navy);
+  box-shadow: 0 4px 14px rgba(10, 22, 48, 0.2);
+}
+
+.btn-dark:hover {
+  background-color: var(--color-lighter-navy);
+  color: var(--color-gold);
+  border-color: var(--color-gold);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(10, 22, 48, 0.3);
+}
+
+
+
+/* Section 2: Why Choose SkillGenesis? */
+.why-section {
+  position: relative;
+  background-color: var(--color-ivory);
+  padding: 6.5rem 0 7rem;
+  border-bottom: 1px solid rgba(10, 22, 48, 0.1);
+}
+
+.why-header {
+  max-width: 720px;
+  margin-bottom: 3.75rem;
+}
+
+.why-eyebrow {
+  margin-bottom: 1rem;
+}
+
+.why-eyebrow .editorial-label {
+  color: var(--color-deep-bronze);
+}
+
+.why-eyebrow .editorial-label::before {
+  background-color: var(--color-deep-bronze);
+}
+
+.why-title {
+  font-size: clamp(2.2rem, 3.6vw, 3.25rem);
+  font-weight: var(--fw-extrabold);
+  line-height: 1.14;
+  letter-spacing: -0.03em;
+  color: var(--color-navy);
+  margin-bottom: 1rem;
+}
+
+.why-subtitle {
+  font-size: 1.12rem;
+  color: var(--color-slate);
+  line-height: 1.6;
+}
+
+/* 5 Benefits List (Editorial Horizontal Cards inspired by slide 10/11) */
+.benefits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.benefit-item {
+  display: grid;
+  grid-template-columns: 80px 1fr auto;
+  align-items: center;
+  gap: 2rem;
+  background-color: var(--color-warm-white);
+  border: 1px solid rgba(10, 22, 48, 0.12);
+  border-radius: 12px;
+  padding: 1.75rem 2.25rem;
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.benefit-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: transparent;
+  transition: background-color var(--transition-fast);
+}
+
+.benefit-item:hover {
+  transform: translateY(-3px);
+  border-color: rgba(217, 177, 90, 0.45);
+  box-shadow: 0 12px 28px rgba(10, 22, 48, 0.08);
+}
+
+.benefit-item:hover::before {
+  background-color: var(--color-gold);
+}
+
+/* Numbered Circular Badge */
+.benefit-badge {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--color-navy);
+  color: var(--color-ivory);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  font-weight: var(--fw-extrabold);
+  font-style: italic;
+  font-family: var(--font-primary);
+  border: 2px solid var(--color-gold);
+  box-shadow: 0 4px 12px rgba(10, 22, 48, 0.15);
+  flex-shrink: 0;
+  transition: transform var(--transition-fast), background-color var(--transition-fast);
+}
+
+.benefit-item:hover .benefit-badge {
+  transform: scale(1.06);
+  background-color: var(--color-lighter-navy);
+}
+
+.benefit-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.benefit-title {
+  font-size: 1.25rem;
+  font-weight: var(--fw-bold);
+  color: var(--color-navy);
+  letter-spacing: -0.015em;
+}
+
+.benefit-text {
+  font-size: 1rem;
+  color: var(--color-slate);
+  line-height: 1.6;
+}
+
+.benefit-indicator-arrow {
+  color: var(--color-deep-bronze);
+  opacity: 0.4;
+  transition: opacity var(--transition-fast), transform var(--transition-fast);
+}
+
+.benefit-item:hover .benefit-indicator-arrow {
+  opacity: 1;
+  transform: translateX(4px);
+}
+
+/* Responsive Part 2 Styles */
+@media (max-width: 992px) {
+  .course-intro-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .editorial-frame-light {
+    padding: 2.5rem 1.75rem;
+  }
+
+  .benefit-item {
+    grid-template-columns: 60px 1fr;
+    padding: 1.5rem 1.5rem;
+    gap: 1.25rem;
+  }
+
+  .benefit-indicator-arrow {
+    display: none;
+  }
+
+  .benefit-badge {
+    width: 52px;
+    height: 52px;
+    font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .course-intro-section,
+  .why-section {
+    padding: 4.5rem 0;
+  }
+
+  .frame-tag-light,
+  .frame-corner-light {
+    position: static;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+  }
+
+  .editorial-frame-light {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .intro-headline,
+  .why-title {
+    font-size: 2.1rem;
+  }
+
+  .benefit-item {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .benefit-badge {
+    width: 44px;
+    height: 44px;
+    font-size: 1rem;
+  }
+}
