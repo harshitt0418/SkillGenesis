@@ -66,18 +66,25 @@ export default function PracticalSkills() {
       <div className="container">
         
         <div className="practical-header">
-          <div className="practical-eyebrow">
+          <div className="practical-eyebrow" data-reveal>
             <span className="editorial-label">Experiential Methodology · 07 // 11</span>
           </div>
-          <h2 className="practical-title">Practical learning built for the modern workplace.</h2>
-          <p className="practical-subtitle">
+          <h2 className="practical-title" data-reveal="clip-up">
+            Practical learning built for the modern workplace.
+          </h2>
+          <p className="practical-subtitle" data-reveal data-delay="1">
             Every module is crafted to connect classroom learning with tangible workplace execution, portfolio evidence, and long-term career confidence.
           </p>
         </div>
 
         <div className="modules-grid">
-          {modulesData.map((item) => (
-            <div key={item.index} className="module-card">
+          {modulesData.map((item, index) => (
+            <div
+              key={item.index}
+              className="module-card"
+              data-reveal
+              data-delay={(index % 4) + 1}
+            >
               <div>
                 <div className="module-top-row">
                   <div className="module-icon-box">

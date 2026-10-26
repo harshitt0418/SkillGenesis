@@ -6,17 +6,17 @@ export default function FinalCta({ onOpenModal }) {
       <div className="cta-radial-glow"></div>
       
       <div className="container">
-        <div className="final-cta-frame">
+        <div className="final-cta-frame" data-reveal="scale">
           
-          <div className="final-cta-badge">
+          <div className="final-cta-badge" data-reveal>
             <span>Career Accelerator · 11 // 11</span>
           </div>
 
-          <h2 className="final-cta-headline">
+          <h2 className="final-cta-headline" data-reveal="clip-up">
             Your Future Needs More Than a Certificate.
           </h2>
 
-          <div className="final-cta-content">
+          <div className="final-cta-content" data-reveal data-delay="2">
             <p>
               It needs skills. It needs initiative. It needs the confidence to turn opportunities into achievements.
             </p>
@@ -34,7 +34,7 @@ export default function FinalCta({ onOpenModal }) {
             </p>
           </div>
 
-          <div className="final-cta-btn-wrap">
+          <div className="final-cta-btn-wrap" data-reveal data-delay="3">
             <Button
               variant="primary"
               className="btn-cta-large"

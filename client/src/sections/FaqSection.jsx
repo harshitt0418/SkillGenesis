@@ -13,11 +13,13 @@ export default function FaqSection() {
       <div className="container">
         
         <div className="faqs-header">
-          <div className="faqs-eyebrow">
+          <div className="faqs-eyebrow" data-reveal>
             <span className="editorial-label">Common Inquiries · 10 // 11</span>
           </div>
-          <h2 className="faqs-title">Frequently Asked Questions</h2>
-          <p className="faqs-subtitle">
+          <h2 className="faqs-title" data-reveal="clip-up">
+            Frequently Asked Questions
+          </h2>
+          <p className="faqs-subtitle" data-reveal data-delay="1">
             Clear, transparent answers about the Career Accelerator program, eligibility, commitments, and outcomes.
           </p>
         </div>
@@ -29,6 +31,8 @@ export default function FaqSection() {
               <div
                 key={item.number}
                 className={`faq-item ${isActive ? 'active' : ''}`}
+                data-reveal
+                data-delay={index + 1}
               >
                 <button
                   type="button"

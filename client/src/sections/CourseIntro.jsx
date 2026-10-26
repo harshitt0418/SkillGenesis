@@ -18,7 +18,7 @@ export default function CourseIntro() {
     <section className="course-intro-section" id="course-intro">
       <div className="container">
         
-        <div className="editorial-frame-light">
+        <div className="editorial-frame-light" data-reveal="scale">
           <span className="frame-tag-light">The Industry-Education Gap</span>
           <span className="frame-corner-light">02 // 11</span>
 
@@ -26,15 +26,15 @@ export default function CourseIntro() {
             
             {/* Left: Headline, Editorial Copy & CTA */}
             <div className="intro-content">
-              <h2 className="intro-headline">
+              <h2 className="intro-headline" data-reveal="clip-up">
                 Don't Just Earn a Degree. <span className="highlight-badge-gold">Build a Career.</span>
               </h2>
 
-              <p className="intro-lead-tag">
+              <p className="intro-lead-tag" data-reveal data-delay="1">
                 Introducing the SkillGenesis Career Accelerator — Thinking Beyond Degrees.
               </p>
 
-              <div className="intro-body-copy">
+              <div className="intro-body-copy" data-reveal data-delay="2">
                 <p>
                   Your degree gives you knowledge. We help you turn that knowledge into practical skills, real-world experience, and career-ready confidence.
                 </p>
@@ -43,7 +43,7 @@ export default function CourseIntro() {
                 </p>
               </div>
 
-              <div className="intro-actions">
+              <div className="intro-actions" data-reveal data-delay="3">
                 <a
                   href="#why-skillgenesis"
                   className="btn btn-dark"
@@ -56,7 +56,7 @@ export default function CourseIntro() {
             </div>
 
             {/* Right: Feature Spotlight Card */}
-            <div className="intro-spotlight">
+            <div className="intro-spotlight" data-reveal="scale" data-delay="2">
               <div className="gap-bridge-card">
                 <div className="gap-bridge-header">
                   <span className="gap-bridge-eyebrow">Program Architecture</span>
@@ -64,7 +64,7 @@ export default function CourseIntro() {
                 </div>
 
                 <div className="pillar-chips-list">
-                  <div className="pillar-chip">
+                  <div className="pillar-chip" data-reveal data-delay="1">
                     <div className="pillar-icon-box">
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                         <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
@@ -76,7 +76,7 @@ export default function CourseIntro() {
                     <span className="pillar-text">Live mentor-led sessions</span>
                   </div>
 
-                  <div className="pillar-chip">
+                  <div className="pillar-chip" data-reveal data-delay="2">
                     <div className="pillar-icon-box">
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                         <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
@@ -87,7 +87,7 @@ export default function CourseIntro() {
                     <span className="pillar-text">Hands-on projects</span>
                   </div>
 
-                  <div className="pillar-chip">
+                  <div className="pillar-chip" data-reveal data-delay="3">
                     <div className="pillar-icon-box">
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                         <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
@@ -98,7 +98,7 @@ export default function CourseIntro() {
                     <span className="pillar-text">AI-powered tools</span>
                   </div>
 
-                  <div className="pillar-chip">
+                  <div className="pillar-chip" data-reveal data-delay="4">
                     <div className="pillar-icon-box">
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                         <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
@@ -107,7 +107,7 @@ export default function CourseIntro() {
                     <span className="pillar-text">Business simulations</span>
                   </div>
 
-                  <div className="pillar-chip">
+                  <div className="pillar-chip" data-reveal data-delay="5">
                     <div className="pillar-icon-box">
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                         <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>

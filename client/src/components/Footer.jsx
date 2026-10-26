@@ -22,7 +22,7 @@ export default function Footer({ onOpenModal }) {
       <div className="footer-watermark">Beyond Degrees</div>
 
       <div className="container">
-        <div className="footer-top">
+        <div className="footer-top" data-reveal>
           
           {/* Brand Column */}
           <div className="footer-brand">

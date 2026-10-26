@@ -14,6 +14,7 @@ import FinalCta from './sections/FinalCta';
 
 import { useStickyHeader } from './hooks/useStickyHeader';
 import { useScrollSpy } from './hooks/useScrollSpy';
+import { useScrollReveal } from './hooks/useScrollReveal';
 
 const SECTION_IDS = [
   'hero',
@@ -30,6 +31,9 @@ export default function App() {
 
   const isScrolled = useStickyHeader(40);
   const activeSection = useScrollSpy(SECTION_IDS, 140);
+
+  // Initialize global refined scroll reveal observer
+  useScrollReveal();
 
   const handleOpenModal = () => setIsModalOpen(true);
   const handleCloseModal = () => setIsModalOpen(false);

@@ -1,6 +1,9 @@
 import Button from '../components/Button';
+import { useHeroParallax } from '../hooks/useHeroParallax';
 
 export default function Hero({ onOpenModal }) {
+  const heroRef = useHeroParallax();
+
   const handleScrollToCourse = (e) => {
     e.preventDefault();
     const targetElement = document.querySelector('#course-intro');
@@ -17,10 +20,10 @@ export default function Hero({ onOpenModal }) {
   };
 
   return (
-    <section className="hero-section" id="hero">
+    <section className="hero-section" id="hero" ref={heroRef}>
       <div className="subtle-grid-bg"></div>
-      <div className="hero-glow-1"></div>
-      <div className="hero-glow-2"></div>
+      <div className="hero-glow-1 parallax-subtle-reverse"></div>
+      <div className="hero-glow-2 parallax-subtle"></div>
 
       <div className="container hero-grid">
         
@@ -59,7 +62,7 @@ export default function Hero({ onOpenModal }) {
           </div>
 
           <div className="hero-credibility">
-            <span className="credibility-line-accent"></span>
+            <span className="credibility-line-accent" data-reveal="line-draw"></span>
             <div className="credibility-text">
               <span>Live mentor-led learning</span>
               <span className="credibility-dot"></span>
@@ -72,7 +75,7 @@ export default function Hero({ onOpenModal }) {
         </div>
 
         {/* Right: Abstract Composition */}
-        <div className="hero-visual-wrapper">
+        <div className="hero-visual-wrapper parallax-subtle">
           
           {/* Outer Architectural Showcase Frame */}
           <div className="composition-frame">
@@ -81,7 +84,7 @@ export default function Hero({ onOpenModal }) {
 
             {/* Rotating Seal Badge */}
             <div
-              className="rotating-seal-badge"
+              className="rotating-seal-badge parallax-subtle-reverse"
               title="SkillGenesis - Thinking Beyond Degrees"
               onClick={onOpenModal}
             >

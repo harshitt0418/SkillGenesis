@@ -6,18 +6,25 @@ export default function WhySkillGenesis() {
       <div className="container">
         
         <div className="why-header">
-          <div className="why-eyebrow">
+          <div className="why-eyebrow" data-reveal>
             <span className="editorial-label">Core Value Pillars · 03 // 11</span>
           </div>
-          <h2 className="why-title">Why choose SkillGenesis?</h2>
-          <p className="why-subtitle">
+          <h2 className="why-title" data-reveal="clip-up">
+            Why choose SkillGenesis?
+          </h2>
+          <p className="why-subtitle" data-reveal data-delay="1">
             A structured framework designed to transform academic potential into workplace capability and professional confidence.
           </p>
         </div>
 
         <div className="benefits-list">
-          {benefitsData.map((item) => (
-            <div key={item.number} className="benefit-item">
+          {benefitsData.map((item, index) => (
+            <div
+              key={item.number}
+              className="benefit-item"
+              data-reveal
+              data-delay={Math.min(index + 1, 6)}
+            >
               <div className="benefit-badge">{item.number}</div>
               <div className="benefit-content">
                 <h3 className="benefit-title">{item.title}</h3>
