@@ -1,0 +1,468 @@
+/* =========================================================================
+   PART 4 STYLES: FAQs, Final CTA Section, and Footer
+   ========================================================================= */
+
+/* -------------------------------------------------------------------------
+   1. FAQs Accordion Section (Ivory Background #F5F1E6)
+   ------------------------------------------------------------------------- */
+.faqs-section {
+  position: relative;
+  background-color: var(--color-ivory);
+  padding: 6.5rem 0 7.5rem;
+  border-top: 1px solid rgba(10, 22, 48, 0.1);
+  border-bottom: 1px solid rgba(10, 22, 48, 0.1);
+}
+
+.faqs-header {
+  max-width: 720px;
+  margin-bottom: 3.5rem;
+}
+
+.faqs-eyebrow {
+  margin-bottom: 1rem;
+}
+
+.faqs-eyebrow .editorial-label {
+  color: var(--color-deep-bronze);
+}
+
+.faqs-eyebrow .editorial-label::before {
+  background-color: var(--color-deep-bronze);
+}
+
+.faqs-title {
+  font-size: clamp(2.2rem, 3.8vw, 3.25rem);
+  font-weight: var(--fw-extrabold);
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  color: var(--color-navy);
+  margin-bottom: 1rem;
+}
+
+.faqs-subtitle {
+  font-size: 1.12rem;
+  color: var(--color-slate);
+  line-height: 1.6;
+}
+
+/* Accordion Component */
+.faq-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+  max-width: 900px;
+}
+
+.faq-item {
+  background-color: var(--color-warm-white);
+  border: 1px solid rgba(10, 22, 48, 0.12);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all var(--transition-normal);
+}
+
+.faq-item:hover {
+  border-color: rgba(217, 177, 90, 0.5);
+  box-shadow: 0 8px 24px rgba(10, 22, 48, 0.06);
+}
+
+.faq-item.active {
+  border-color: var(--color-gold);
+  box-shadow: 0 12px 28px rgba(10, 22, 48, 0.08);
+}
+
+.faq-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.65rem 2rem;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  gap: 1.5rem;
+  color: var(--color-navy);
+  transition: color var(--transition-fast);
+}
+
+.faq-question-wrap {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.faq-number {
+  font-size: 0.85rem;
+  font-weight: var(--fw-bold);
+  font-style: italic;
+  color: var(--color-deep-bronze);
+  letter-spacing: 0.05em;
+  width: 24px;
+  flex-shrink: 0;
+}
+
+.faq-question {
+  font-size: 1.2rem;
+  font-weight: var(--fw-bold);
+  line-height: 1.35;
+  color: var(--color-navy);
+  letter-spacing: -0.015em;
+  transition: color var(--transition-fast);
+}
+
+.faq-item.active .faq-question {
+  color: var(--color-deep-bronze);
+}
+
+.faq-icon-wrapper {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(10, 22, 48, 0.05);
+  border: 1px solid rgba(10, 22, 48, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all var(--transition-fast);
+  color: var(--color-navy);
+}
+
+.faq-item.active .faq-icon-wrapper {
+  background: var(--color-gold);
+  border-color: var(--color-gold);
+  color: var(--color-navy);
+  transform: rotate(180deg);
+}
+
+.faq-answer-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transition-normal), opacity var(--transition-normal);
+  opacity: 0;
+}
+
+.faq-item.active .faq-answer-panel {
+  max-height: 350px;
+  opacity: 1;
+}
+
+.faq-answer-content {
+  padding: 0 2rem 1.75rem calc(2rem + 1.25rem + 24px);
+  color: var(--color-slate);
+  font-size: 1.02rem;
+  line-height: 1.75;
+}
+
+@media (max-width: 600px) {
+  .faq-trigger {
+    padding: 1.25rem 1.25rem;
+    gap: 1rem;
+  }
+  .faq-question {
+    font-size: 1.05rem;
+  }
+  .faq-answer-content {
+    padding: 0 1.25rem 1.25rem 1.25rem;
+  }
+}
+
+/* -------------------------------------------------------------------------
+   2. Final CTA Section (Midnight Navy #0A1630)
+   ------------------------------------------------------------------------- */
+.final-cta-section {
+  position: relative;
+  background-color: var(--color-navy);
+  padding: 8rem 0;
+  overflow: hidden;
+  text-align: center;
+}
+
+.cta-radial-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 650px;
+  height: 650px;
+  background: radial-gradient(circle, rgba(217, 177, 90, 0.12) 0%, rgba(10, 22, 48, 0) 70%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.final-cta-frame {
+  position: relative;
+  z-index: 2;
+  max-width: 860px;
+  margin: 0 auto;
+  border: 1px solid var(--border-ivory-low);
+  border-radius: 20px;
+  padding: 4.5rem 3.5rem;
+  background: linear-gradient(165deg, rgba(18, 36, 74, 0.5) 0%, rgba(10, 22, 48, 0.85) 100%);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: var(--shadow-lg);
+}
+
+.final-cta-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.72rem;
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  background: rgba(217, 177, 90, 0.12);
+  padding: 0.35rem 0.95rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(217, 177, 90, 0.28);
+  margin-bottom: 2rem;
+}
+
+.final-cta-headline {
+  font-size: clamp(2.4rem, 4.4vw, 3.85rem);
+  font-weight: var(--fw-extrabold);
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+  color: var(--color-ivory);
+  margin-bottom: 1.75rem;
+}
+
+.final-cta-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 680px;
+  margin: 0 auto 2.5rem;
+}
+
+.final-cta-content p {
+  font-size: 1.1rem;
+  color: var(--color-blue-grey);
+  line-height: 1.7;
+}
+
+.cta-editorial-italic {
+  font-size: 1.22rem;
+  font-weight: var(--fw-semibold);
+  font-style: italic;
+  color: var(--color-gold);
+  margin: 0.4rem 0;
+}
+
+.cta-tagline-punch {
+  font-size: 0.82rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-muted-blue-grey);
+  font-weight: var(--fw-semibold);
+}
+
+.cta-journey-start {
+  font-size: 1.15rem;
+  font-weight: var(--fw-semibold);
+  color: var(--color-ivory);
+}
+
+.final-cta-btn-wrap {
+  margin-top: 1rem;
+}
+
+.btn-cta-large {
+  padding: 1.15rem 2.75rem;
+  font-size: 1.05rem;
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 768px) {
+  .final-cta-section {
+    padding: 5rem 0;
+  }
+  .final-cta-frame {
+    padding: 2.75rem 1.5rem;
+  }
+  .final-cta-headline {
+    font-size: 2.3rem;
+  }
+}
+
+/* -------------------------------------------------------------------------
+   3. Footer Styles (Midnight Navy with Watermark)
+   ------------------------------------------------------------------------- */
+.site-footer {
+  position: relative;
+  background-color: #070e1e;
+  border-top: 1px solid var(--border-ivory-low);
+  padding: 5.5rem 0 3rem;
+  overflow: hidden;
+  color: var(--color-blue-grey);
+}
+
+/* Background Large Watermark "Beyond Degrees" */
+.footer-watermark {
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: clamp(4.5rem, 11vw, 12rem);
+  font-weight: var(--fw-extrabold);
+  letter-spacing: -0.04em;
+  color: rgba(245, 241, 230, 0.025);
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+  z-index: 1;
+}
+
+.footer-top {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+  gap: 3.5rem;
+  margin-bottom: 4.5rem;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.footer-brand-desc {
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: var(--color-muted-blue-grey);
+  max-width: 340px;
+}
+
+.footer-column-title {
+  font-size: 0.76rem;
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: 1.5rem;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.footer-links li a {
+  font-size: 0.9rem;
+  color: var(--color-blue-grey);
+  transition: color var(--transition-fast), transform var(--transition-fast);
+  display: inline-block;
+}
+
+.footer-links li a:hover {
+  color: var(--color-ivory);
+  transform: translateX(4px);
+}
+
+/* Social & Contact Placeholders */
+.footer-social-row {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.social-pill {
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  background: rgba(245, 241, 230, 0.05);
+  border: 1px solid var(--border-ivory-low);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-blue-grey);
+  transition: all var(--transition-fast);
+}
+
+.social-pill:hover {
+  background: rgba(217, 177, 90, 0.15);
+  border-color: var(--color-gold);
+  color: var(--color-gold);
+  transform: translateY(-2px);
+}
+
+.social-pill svg {
+  width: 17px;
+  height: 17px;
+}
+
+.footer-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+  color: var(--color-blue-grey);
+  margin-bottom: 0.85rem;
+}
+
+.footer-contact-item svg {
+  width: 18px;
+  height: 18px;
+  color: var(--color-gold);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Footer Bottom Bar */
+.footer-bottom {
+  position: relative;
+  z-index: 2;
+  border-top: 1px solid var(--border-ivory-low);
+  padding-top: 2.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  font-size: 0.82rem;
+  color: var(--color-muted-blue-grey);
+}
+
+.footer-copyright {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.footer-bottom-tagline {
+  font-weight: var(--fw-medium);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  font-size: 0.72rem;
+}
+
+/* Responsive Footer */
+@media (max-width: 992px) {
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .site-footer {
+    padding: 4.5rem 0 2.5rem;
+  }
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

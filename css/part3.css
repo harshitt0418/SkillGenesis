@@ -1,0 +1,408 @@
+/* =========================================================================
+   PART 3 STYLES: Learning Progression & Practical Skills Modules
+   ========================================================================= */
+
+/* Section 1: Three-Level Staircase Progression (Midnight Navy) */
+.progression-section {
+  position: relative;
+  background-color: var(--color-navy);
+  padding: 7rem 0 8rem;
+  border-top: 1px solid var(--border-ivory-low);
+  border-bottom: 1px solid var(--border-ivory-low);
+  overflow: hidden;
+}
+
+.progression-frame {
+  position: relative;
+  border: 1px solid var(--border-ivory-low);
+  border-radius: 18px;
+  padding: 4rem 3.5rem;
+  background: linear-gradient(175deg, rgba(18, 36, 74, 0.4) 0%, rgba(10, 22, 48, 0.8) 100%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.frame-corner-dark {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  font-size: 0.75rem;
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.16em;
+  color: var(--color-muted-blue-grey);
+}
+
+.frame-tag-dark {
+  position: absolute;
+  top: 1.5rem;
+  left: 2rem;
+  font-size: 0.72rem;
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.18em;
+  color: var(--color-gold);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.frame-tag-dark::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 2px;
+  background-color: var(--color-gold);
+}
+
+.progression-header {
+  max-width: 680px;
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+}
+
+.progression-title {
+  font-size: clamp(2.4rem, 4.2vw, 3.8rem);
+  font-weight: var(--fw-extrabold);
+  line-height: 1.1;
+  letter-spacing: -0.035em;
+  color: var(--color-ivory);
+  margin-bottom: 1.25rem;
+}
+
+.progression-title em {
+  font-style: italic;
+  color: var(--color-gold);
+  font-weight: var(--fw-extrabold);
+}
+
+.progression-subtitle {
+  font-size: 1.15rem;
+  color: var(--color-blue-grey);
+  line-height: 1.7;
+}
+
+/* 3-Level Staircase Architecture */
+.staircase-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+  align-items: flex-end;
+  margin-bottom: 3.5rem;
+}
+
+.staircase-card {
+  position: relative;
+  border-radius: 14px;
+  padding: 2.25rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all var(--transition-normal);
+  overflow: hidden;
+}
+
+.staircase-card:hover {
+  transform: translateY(-8px);
+}
+
+/* Level 1 Foundation */
+.level-1-card {
+  min-height: 380px;
+  background: rgba(18, 36, 74, 0.45);
+  border: 1px solid var(--border-ivory-low);
+}
+
+.level-1-card:hover {
+  border-color: var(--border-gold-subtle);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
+}
+
+/* Level 2 Applied */
+.level-2-card {
+  min-height: 440px;
+  background: var(--color-lighter-navy);
+  border: 1px solid var(--border-ivory-med);
+}
+
+.level-2-card:hover {
+  border-color: var(--color-gold);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5);
+}
+
+/* Level 3 Industry-Ready (The Highlight Destination) */
+.level-3-card {
+  min-height: 500px;
+  background-color: var(--color-gold);
+  color: var(--color-navy);
+  border: 1px solid var(--color-gold);
+  box-shadow: 0 20px 50px rgba(217, 177, 90, 0.28);
+}
+
+.level-3-card:hover {
+  box-shadow: 0 25px 60px rgba(217, 177, 90, 0.42);
+}
+
+/* Card Content Elements */
+.card-level-eyebrow {
+  font-size: 0.72rem;
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 0.85rem;
+}
+
+.level-1-card .card-level-eyebrow,
+.level-2-card .card-level-eyebrow {
+  color: var(--color-gold);
+}
+
+.level-3-card .card-level-eyebrow {
+  color: var(--color-navy);
+  opacity: 0.85;
+}
+
+.card-title {
+  font-size: clamp(1.6rem, 2.2vw, 2.1rem);
+  font-weight: var(--fw-extrabold);
+  line-height: 1.18;
+  margin-bottom: 1rem;
+}
+
+.level-1-card .card-title,
+.level-2-card .card-title {
+  color: var(--color-ivory);
+}
+
+.level-3-card .card-title {
+  color: var(--color-navy);
+}
+
+.card-desc {
+  font-size: 0.98rem;
+  line-height: 1.65;
+}
+
+.level-1-card .card-desc,
+.level-2-card .card-desc {
+  color: var(--color-blue-grey);
+}
+
+.level-3-card .card-desc {
+  color: var(--color-navy);
+  font-weight: var(--fw-medium);
+  opacity: 0.95;
+}
+
+.card-numeral {
+  font-size: 3.5rem;
+  font-weight: var(--fw-extrabold);
+  font-style: italic;
+  line-height: 1;
+  text-align: right;
+  margin-top: 2rem;
+}
+
+.level-1-card .card-numeral {
+  color: var(--color-gold);
+  opacity: 0.45;
+}
+
+.level-2-card .card-numeral {
+  color: var(--color-gold);
+  opacity: 0.8;
+}
+
+.level-3-card .card-numeral {
+  color: var(--color-navy);
+  opacity: 0.85;
+}
+
+/* Bottom Frame Footer (Swipe / Architectural accent) */
+.progression-footer-bar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-ivory-low);
+}
+
+.footer-bar-label {
+  font-size: 0.74rem;
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-muted-blue-grey);
+}
+
+.footer-bar-line {
+  width: 50px;
+  height: 2px;
+  background-color: var(--color-gold);
+}
+
+
+/* Section 2: Practical Learning & Modules (#skills) */
+.practical-section {
+  position: relative;
+  background-color: #0d1a38;
+  padding: 6.5rem 0 7.5rem;
+  border-bottom: 1px solid var(--border-ivory-low);
+}
+
+.practical-header {
+  max-width: 760px;
+  margin-bottom: 3.5rem;
+}
+
+.practical-eyebrow {
+  margin-bottom: 1rem;
+}
+
+.practical-title {
+  font-size: clamp(2.2rem, 3.8vw, 3.25rem);
+  font-weight: var(--fw-extrabold);
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  color: var(--color-ivory);
+  margin-bottom: 1.1rem;
+}
+
+.practical-subtitle {
+  font-size: 1.12rem;
+  color: var(--color-blue-grey);
+  line-height: 1.68;
+}
+
+/* Modules Grid (Presenting the 7 practical learning components) */
+.modules-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.module-card {
+  position: relative;
+  background: rgba(18, 36, 74, 0.45);
+  border: 1px solid var(--border-ivory-low);
+  border-radius: 14px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all var(--transition-normal);
+  overflow: hidden;
+}
+
+.module-card:hover {
+  background: var(--color-lighter-navy);
+  border-color: var(--border-gold-subtle);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(5, 12, 28, 0.5);
+}
+
+.module-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.35rem;
+}
+
+.module-icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(217, 177, 90, 0.12);
+  border: 1px solid var(--border-gold-subtle);
+  color: var(--color-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.module-icon-box svg {
+  width: 22px;
+  height: 22px;
+}
+
+.module-index {
+  font-size: 0.75rem;
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.14em;
+  color: var(--color-muted-blue-grey);
+}
+
+.module-heading {
+  font-size: 1.25rem;
+  font-weight: var(--fw-bold);
+  color: var(--color-ivory);
+  margin-bottom: 0.65rem;
+  line-height: 1.25;
+}
+
+.module-description {
+  font-size: 0.95rem;
+  color: var(--color-blue-grey);
+  line-height: 1.6;
+}
+
+.module-corner-plus {
+  position: absolute;
+  bottom: 1rem;
+  right: 1.25rem;
+  font-size: 0.95rem;
+  color: var(--color-gold);
+  opacity: 0.3;
+  transition: opacity var(--transition-fast), transform var(--transition-fast);
+}
+
+.module-card:hover .module-corner-plus {
+  opacity: 0.9;
+  transform: rotate(90deg);
+}
+
+/* Responsive Part 3 Styles */
+@media (max-width: 992px) {
+  .progression-frame {
+    padding: 3rem 2rem;
+  }
+
+  .staircase-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    align-items: stretch;
+  }
+
+  .level-1-card,
+  .level-2-card,
+  .level-3-card {
+    min-height: auto;
+    padding: 2rem 1.75rem;
+  }
+
+  .card-numeral {
+    margin-top: 1.25rem;
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .progression-section,
+  .practical-section {
+    padding: 4.5rem 0;
+  }
+
+  .progression-frame {
+    padding: 2.25rem 1.25rem;
+  }
+
+  .frame-tag-dark,
+  .frame-corner-dark {
+    position: static;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+  }
+
+  .modules-grid {
+    grid-template-columns: 1fr;
+  }
+}

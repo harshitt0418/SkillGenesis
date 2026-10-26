@@ -1,0 +1,51 @@
+:root {
+  /* Core Color Palette */
+  --color-navy: #0A1630;
+  --color-ivory: #F5F1E6;
+  --color-gold: #D9B15A;
+  --color-deep-bronze: #8A6A1F;
+  --color-blue-grey: #B7C0D6;
+  --color-muted-blue-grey: #8E9AB5;
+  --color-slate: #4A5470;
+  --color-light-slate: #6B7390;
+  --color-lighter-navy: #12244A;
+  --color-warm-white: #FBF9F3;
+
+  /* Alpha Overlays & Borders */
+  --border-ivory-low: rgba(245, 241, 230, 0.14);
+  --border-ivory-med: rgba(245, 241, 230, 0.28);
+  --border-ivory-high: rgba(245, 241, 230, 0.45);
+  --border-gold-subtle: rgba(217, 177, 90, 0.28);
+  --border-gold-glow: rgba(217, 177, 90, 0.55);
+  
+  --bg-navy-blur: rgba(10, 22, 48, 0.88);
+  --bg-card-navy: rgba(18, 36, 74, 0.72);
+  --bg-card-navy-solid: #12244A;
+
+  /* Typography */
+  --font-primary: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  
+  /* Font weights */
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --fw-extrabold: 800;
+  --fw-black: 900;
+
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Shadows */
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.25);
+  --shadow-md: 0 12px 30px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 24px 50px rgba(5, 12, 28, 0.55);
+  --shadow-gold: 0 8px 24px rgba(217, 177, 90, 0.25);
+
+  /* Layout */
+  --max-width: 1280px;
+  --header-height: 84px;
+}
